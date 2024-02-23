@@ -1,3 +1,6 @@
-import { sayHello } from './demo';
+import { checkButtonElement } from './dom';
+import { showLetter } from './functions';
 
-sayHello();
+checkButtonElement.addEventListener('click', () => {
+	showLetter();
+});

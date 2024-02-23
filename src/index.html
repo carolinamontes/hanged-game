@@ -7,11 +7,39 @@
 		<link rel="stylesheet" href="css/base/normalize.css" />
 		<link rel="stylesheet" href="css/base/base.css" />
 		<link rel="stylesheet" href="css/styles.css" />
-		<title>Vite App</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+		<title>Ahorcado</title>
 	</head>
 	<body>
-		<h1>WEB WITH VITE</h1>
-		<!-- <img src="./assets/images/cute-cat.webp" alt="" /> -->
+        <p class="title">Ahorcado</p>
+    
+        <div class="game-container">
+            <div class="rectangle-game"></div>
+            <div class="game">
+                <div id="word-display" class="word-display"></div>
+                <div>
+                    <input type="text" id="letter-container" name="letter-container" placeholder="Escribe una letra" maxlength="1" class="letter">
+                </div>
+                    <button class="button" id="button">Comprobar</button>
+                <div>
+                    <div class="attempts">
+                        <span>Te quedan:</span>
+                        <span id="attempts"></span>
+                        <span id="numbers">5</span> 
+                        <span>intentos</span>
+                    </div>
+                    <div>
+                        <p>Historial de letras:</p>
+                        <span id="letter-history"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="loser hidden" id="loser">¡PERDISTE!</div>
+        <div class="winner hidden" id="winner">¡FELICIDADES, has ganado!</div>
 		<script type="module" src="./js/index.js"></script>
 	</body>
 </html>
